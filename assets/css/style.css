@@ -55,7 +55,7 @@ a {
 }
 /* Hero */
 .hero-wrap {
-  height: 100vh;
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   background: var(--background--color);
