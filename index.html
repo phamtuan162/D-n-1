@@ -19,37 +19,80 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Reponsive -->
+  <link rel="stylesheet" href="./assets/css/reponsive.css" />
 </head>
 
 <body>
-  <main>
-    <!-- Header -->
-    <header class="header-fixed">
-      <div class="content">
-        <nav class="navbar">
-          <!-- Logo -->
-          <a href="#">
-            <img src="./assets/img/logo.png" alt="Besnik." />
-          </a>
+  <!-- PC Header -->
+  <header class="header-fixed">
+    <div class="content">
+      <nav class="navbar">
+        <!-- Tablet/Mobile menu -->
+        <label for="menu-checkbox" class="toggle-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path fill="currentColor"
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg>
+        </label>
 
-          <!-- Navigation -->
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <!-- Action -->
+        <!-- Logo -->
+        <a class="logo" href="#">
+          <img src="./assets/img/logo.png" alt="Besnik." />
+        </a>
 
-          <div class="action">
-            <a href="#!" class="action-link">Sign in</a>
-            <a href="#!" class="btn action-btn">Sign up</a>
-          </div>
-        </nav>
-      </div>
-    </header>
+        <!-- Navigation -->
+        <ul id="pc-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class=" show-on-mobile separate"><a href="#!">Sign in</a></li>
+          <li class=" btn btn-mobile show-on-mobile"><a href="#!">Sign up</a></li>
+        </ul>
+        <!-- Action -->
 
+        <div class="action">
+          <a href="#!" class="action-link">Sign in</a>
+          <a href="#!" class="btn action-btn">Sign up</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Tablet/mobile header -->
+  <header class="mobile-header">
+    <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+    <!-- Overlay -->
+    <label for="menu-checkbox" class="menu-overlay">
+
+    </label>
+    <!-- Menu content -->
+    <div class="menu-drawer">
+      <!-- Close -->
+      <label for="menu-checkbox" class="close-up-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+          viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path fill="currentColor"
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+        </svg>
+      </label>
+      <!-- Logo -->
+      <a class="" href="#">
+        <img src="./assets/img/logo.png" alt="Besnik." />
+      </a>
+      <!-- Navigation -->
+      <ul id="mobile-nav"></ul>
+      <script>
+        const pcNav = document.querySelector("#pc-nav");
+        const mobileNav = document.querySelector("#mobile-nav");
+        mobileNav.innerHTML = pcNav.innerHTML;
+      </script>
+    </div>
+  </header>
+  <main hidden>
     <!-- Hero -->
     <div class="hero-wrap">
       <div class="content">
@@ -325,94 +368,95 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="content">
-        <div class="row row-top">
 
-          <!-- Product column -->
-          <div class="column">
-            <h3 class="heading">Product</h3>
-            <ul class="list">
-              <li class="item">
-                <a href="">Listing</a>
-              </li>
-              <li class="item">
-                <a href="">Property</a>
-              </li>
-              <li class="item">
-                <a href="">Agents</a>
-              </li>
-              <li class="item">
-                <a href="">Blog</a>
-              </li>
-            </ul>
-          </div>
+  </main>
+  <!-- Footer -->
+  <footer style="display: none;" class="footer">
+    <div class="content">
+      <div class="row row-top">
 
-
-          <div class="column">
-            <h3 class="heading">Resources</h3>
-            <ul class="list">
-              <li class="item">
-                <a href="">Member Stories</a>
-              </li>
-              <li class="item">
-                <a href="">Video</a>
-              </li>
-              <li class="item">
-                <a href="">Our Homes</a>
-              </li>
-              <li class="item">
-                <a href="">Free trial</a>
-              </li>
-            </ul>
-          </div>
-
-
-          <div class="column">
-            <h3 class="heading">Company</h3>
-            <ul class="list">
-              <li class="item">
-                <a href="">Patnerships</a>
-              </li>
-              <li class="item">
-                <a href="">Terms of use</a>
-              </li>
-              <li class="item">
-                <a href="">Privacy</a>
-              </li>
-              <li class="item">
-                <a href="">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-
-
-          <div class="column">
-            <h3 class="heading">Get in touch</h3>
-            <p class="desc">You’ll find your next home, in any style you prefer.</p>
-            <div class="social">
-              <a href="" class="social-link">
-                <img src="./assets/img/facebook.png" alt="">
-              </a>
-              <a href="" class="social-link">
-                <img src="./assets//img/twier.png" alt="">
-              </a>
-              <a href="" class="social-link">
-                <img src="./assets/img/linkdin.png" alt="">
-              </a>
-            </div>
-            </ul>
-          </div>
+        <!-- Product column -->
+        <div class="column">
+          <h3 class="heading">Product</h3>
+          <ul class="list">
+            <li class="item">
+              <a href="">Listing</a>
+            </li>
+            <li class="item">
+              <a href="">Property</a>
+            </li>
+            <li class="item">
+              <a href="">Agents</a>
+            </li>
+            <li class="item">
+              <a href="">Blog</a>
+            </li>
+          </ul>
         </div>
 
-        <div class="row row-bottom">
-          <img src="./assets/img/logo.png" alt="Besnik" class="logo">
-          <p class="copyright">Copyright 2020.com, All rights reserved.</p>
+
+        <div class="column">
+          <h3 class="heading">Resources</h3>
+          <ul class="list">
+            <li class="item">
+              <a href="">Member Stories</a>
+            </li>
+            <li class="item">
+              <a href="">Video</a>
+            </li>
+            <li class="item">
+              <a href="">Our Homes</a>
+            </li>
+            <li class="item">
+              <a href="">Free trial</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="column">
+          <h3 class="heading">Company</h3>
+          <ul class="list">
+            <li class="item">
+              <a href="">Patnerships</a>
+            </li>
+            <li class="item">
+              <a href="">Terms of use</a>
+            </li>
+            <li class="item">
+              <a href="">Privacy</a>
+            </li>
+            <li class="item">
+              <a href="">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="column">
+          <h3 class="heading">Get in touch</h3>
+          <p class="desc">You’ll find your next home, in any style you prefer.</p>
+          <div class="social">
+            <a href="" class="social-link">
+              <img src="./assets/img/facebook.png" alt="">
+            </a>
+            <a href="" class="social-link">
+              <img src="./assets//img/twier.png" alt="">
+            </a>
+            <a href="" class="social-link">
+              <img src="./assets/img/linkdin.png" alt="">
+            </a>
+          </div>
+          </ul>
         </div>
       </div>
-    </footer>
-  </main>
+
+      <div class="row row-bottom">
+        <img src="./assets/img/logo.png" alt="Besnik" class="logo">
+        <p class="copyright">Copyright 2020.com, All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
