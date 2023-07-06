@@ -76,8 +76,66 @@
   .btn a {
     color: var(--white--color) !important;
   }
-  .btn {
-    padding: 5px 10px;
+  .hero-img {
+    display: none;
+  }
+  .hero-wrap .info {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-wrap .desc {
+    width: 80%;
+    margin: 30px auto auto;
+  }
+  .clients .images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .guide-item {
+    margin: 0;
+    flex: 1;
+  }
+  .featured .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats .row {
+    flex-direction: column;
+  }
+  .stats .img-block,
+  .stats .info {
+    width: 100%;
+  }
+  .stats .img-block {
+    margin-top: 20px;
+    order: 2;
+  }
+  .stats .info {
+    order: 1;
+    padding: 0;
+  }
+  .stats .info .sub-tittle {
+    width: 70%;
+  }
+  .stats .info .desc {
+    width: 100%;
+  }
+  .stats .row-qty {
+    flex-direction: row;
+  }
+  .stats .qty {
+    font-size: 5rem;
+  }
+  .stats .qty-desc {
+    font-size: 1.5rem;
+  }
+  .subscription .image {
+    display: none;
+  }
+  .footer .row-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 80px;
   }
 }
 
@@ -90,11 +148,74 @@
 
 /* Mobile */
 @media screen and (max-width: 767px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
   .navbar .action {
     display: none;
   }
   .menu-drawer {
     inset: 0 25% 0 0;
     padding: 40px;
+  }
+  .hero-wrap {
+    height: calc(100vh - 60px);
+  }
+  .hero-wrap .title {
+    margin-top: 20px;
+    font-size: 5.2rem;
+  }
+  .hero-wrap .desc {
+    width: 100%;
+  }
+  .clients .images {
+    row-gap: 20px;
+  }
+  .list-guide {
+    flex-direction: column;
+    row-gap: 60px;
+  }
+  .featured .list {
+    grid-template-columns: 1fr;
+  }
+
+  .featured .item .thumb {
+    height: 300px;
+  }
+  .view-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .stats .info .sub-tittle,
+  .stats .img-block .image {
+    width: 100%;
+  }
+  .stats .stats-trend {
+    width: 50%;
+    padding: 20px 22px 20px;
+  }
+  .stats-trend .row {
+    flex-direction: row;
+  }
+  .stats .row-qty {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+  }
+  .subscription .info {
+    padding: 0 32px;
+  }
+  .subscription .body {
+    height: auto;
+    padding: 30px 0;
+  }
+  .footer .row-top {
+    grid-template-columns: 1fr;
+  }
+  .footer .row-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
   }
 }

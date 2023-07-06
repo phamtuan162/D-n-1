@@ -278,7 +278,8 @@ a {
 .featured .list {
   margin-top: 70px;
   gap: 30px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .featured .item {
   flex: 1;
@@ -477,7 +478,7 @@ a {
 .subscription .info {
   width: 671px;
   max-width: 100%;
-  margin: 0 80px;
+  padding: 0 80px;
 }
 .subscription .sub-title {
   font-weight: 600;
@@ -516,7 +517,7 @@ a {
   display: flex;
 }
 .footer .row-top {
-  gap: 185px;
+  column-gap: 185px;
 }
 .footer .heading {
   font-family: "Lato";
